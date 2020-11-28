@@ -9,10 +9,10 @@ const galleryCloserButton = document.querySelector('.lightbox__button');
 galleryUl.addEventListener('click', galleryOpener);
 
 function galleryOpener(e) {
-    
+    e.preventDefault();     
     if (e.target.nodeName === 'IMG') {
         lightBox.classList.add('is-open');
-        console.dir(e.target)
+
         lightBoxImage.src = e.target.dataset.source;
         lightBoxImage.alt = e.target.alt;
     }
