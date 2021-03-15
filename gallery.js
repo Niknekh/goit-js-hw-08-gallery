@@ -38,7 +38,7 @@ window.addEventListener('keydown', _.throttle((e) => {
     } else if (e.code === 'ArrowRight') {
 
         images.forEach((element, index, array) => {
-            if (element.src === refs.currentId && index < 8) {
+            if (element.src === refs.currentId && index < galleryItems.length - 1) {
                             
                 refs.modalImage.src = array[index + 1].dataset.source;
                     refs.currentId = refs.modalImage.src;
